@@ -62,8 +62,8 @@ def main(args):
                 first = False
 
             # read pos and ori from robots
-            action_pos[i] = controller.ee_pos
-            action_ori[i] = Rotation.from_matrix(controller.ee_ori_mat).as_rotvec()
+            action_pos[i] = controller.goal_pos
+            action_ori[i] = Rotation.from_matrix(controller.goal_ori).as_rotvec()
 
             # record low dim states
             new_obs = env.get_observation()
